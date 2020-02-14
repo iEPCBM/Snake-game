@@ -1,0 +1,66 @@
+<!--
+Copyright 2020 Rishat Kagirov
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<!doctype html>
+<html>
+	<head>
+		<title>Snake game</title>
+		<style>
+			#snakeGame {
+				width: 640px;
+				height: 480px;
+			}
+			.game_container {
+				display: flex;
+			}
+			.game_description_content {
+				padding: 25px;
+				display: inline-block;
+			}
+			.pixel {
+				padding: 0 8px;
+				margin: 0 10px 0 0;
+				display: inline;
+			}
+		</style>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="./config.js"></script>
+		<script type="text/javascript" src="./render.js"></script>
+		<script type="text/javascript" src="./snake.js"></script>
+	</head>
+	<body>
+
+		<div class="page_content">
+			<h2 class="page_title">
+				Snake game
+			</h2>
+			<div class="game_container">
+				<div class="canvas_wrapper" id="snakeGame_canvasWrapper">
+					<canvas width="640" height="480" class="gameCnv" id="snakeGame"></canvas>
+				</div>
+				<div class="game_description_content">
+					<p>Use arrows or WASD keys to change direction</p>
+					<p>Press ESC to stop the game</p>
+					<hr>
+					<p><span class="pixel" style="background-color: #FFA9A9"></span> snake</p>
+					<p><span class="pixel" style="background-color: #FFF0A9"></span> apples</p>
+					<p><span class="pixel" style="background-color: #FFE35A"></span> damaged apples</p>
+					<p><span class="pixel" style="background-color: #BABABA"></span> walls and spoiled apples</p>
+					<p><span class="pixel" style="background-color: #DFF0FE"></span> just background</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
